@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    tools:context=".ActivitySearch">
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:paddingRight="16dp"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:textSize="16sp"
+        android:textColor="#333"/>
+
+    <ProgressBar
+        android:id="@+id/artist_search_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/artists_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#333"
+        android:dividerHeight="1dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

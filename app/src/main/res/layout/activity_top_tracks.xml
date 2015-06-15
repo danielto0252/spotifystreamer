@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <ProgressBar
+        android:id="@+id/top_track_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/top_tracks_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#333"
+        android:dividerHeight="1dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
