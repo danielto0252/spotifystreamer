@@ -25,7 +25,7 @@ public class TopTracksAdapter extends BaseAdapter {
     private OnTrackClickListener trackClickListener;
 
     public interface OnTrackClickListener {
-        void onTrackClick(String trackName, String albumName, String thumbnailUrl, String previewUrl);
+        void onTrackClick(int position, String artistName, String trackName, String albumName, String thumbnailUrl, String previewUrl);
     }
 
     public TopTracksAdapter(Context context, List<Track> trackList, OnTrackClickListener trackClickListener) {
@@ -51,8 +51,8 @@ public class TopTracksAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        TopTrackViewHolder viewHolder;
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        final TopTrackViewHolder viewHolder;
         final Track track = getItem(position);
         final List<Image> albumImages = track.album.images;
 
@@ -75,7 +75,7 @@ public class TopTracksAdapter extends BaseAdapter {
         viewHolder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                trackClickListener.onTrackClick(track.name, track.album.name, albumImages.get(0).url, track.preview_url);
+                trackClickListener.onTrackClick(position, track.artists.get(0).name, track.name, track.album.name, albumImages.get(0).url, track.preview_url);
             }
         });
 

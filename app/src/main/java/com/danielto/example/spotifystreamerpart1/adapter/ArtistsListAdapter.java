@@ -55,7 +55,7 @@ public class ArtistsListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ArtistViewHolder viewHolder;
+        final ArtistViewHolder viewHolder;
 
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.artist_item, parent, false);

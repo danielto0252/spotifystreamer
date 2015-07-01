@@ -30,6 +30,7 @@
         android:layout_height="match_parent"
         android:divider="#333"
         android:dividerHeight="1dp"
+        android:choiceMode="singleChoice"
         android:visibility="gone"/>
 
 </LinearLayout>
